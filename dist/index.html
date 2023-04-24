@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Главная</title>
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+  <body>
+    <div class="wrapper">
+      
+      <section class="top">
+  <header class="header" id="header">
+  <div class="container">
+    <div class="header__inner">
+      <div class="burger">
+        <button class="burger__btn">
+          <span class="burger__btn-inner"></span>
+        </button>
+        <nav class="burger__menu">
+          <ul class="burger__menu-list">
+            <li class="burger__menu-item">
+              <a class="burger__menu-link" href="#">О нас</a>
+            </li>
+            <li class="burger__menu-item">
+              <a class="burger__menu-link" href="#">Каталог</a>
+              <ul class="burger__submenu-list">
+                <li class="burger__submenu-item">
+                  <a class="burger__submenu-link" href="#">item 1</a>
+                </li>
+                <li class="burger__submenu-item">
+                  <a class="burger__submenu-link" href="#">item 2</a>
+                </li>
+                <li class="burger__submenu-item">
+                  <a class="burger__submenu-link" href="#">item 3</a>
+                </li>
+                <li class="burger__submenu-item">
+                  <a class="burger__submenu-link" href="#">item 4</a>
+                </li>
+              </ul>
+            </li>
+            <li class="burger__menu-item">
+              <a class="burger__menu-link" href="#">Новости</a>
+            </li>
+            <li class="burger__menu-item">
+              <a class="burger__menu-link" href="#">Вакансии</a>
+            </li>
+            <li class="burger__menu-item">
+              <a class="burger__menu-link" href="#">Контакты</a>
+            </li>
+          </ul>
+          <a class="burger__phone" href="tel:+79991234567">+7 (999) 123-45-67</a>
+        </nav>
+      </div>
+      <nav class="menu menu--nav">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#">О нас</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Каталог</a>
+            <ul class="menu__submenu-list">
+              <li class="menu__submenu-item">
+                <a class="menu__submenu-link" href="#">item 1</a>
+              </li>
+              <li class="menu__submenu-item">
+                <a class="menu__submenu-link" href="#">item 2</a>
+              </li>
+              <li class="menu__submenu-item">
+                <a class="menu__submenu-link" href="#">item 3</a>
+              </li>
+              <li class="menu__submenu-item">
+                <a class="menu__submenu-link" href="#">item 4</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Новости</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Вакансии</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <a class="logo" href="/">
+        <img class="logo__img" src="img/logo.png" alt="Логотип" />
+      </a>
+      <nav class="menu menu--contacts">
+        <ul class="menu__list">
+          <li class="menu__item menu__item--phone">
+            <a class="menu__link" href="tel:+79781992300" title="Позвонить">
+              <img class="menu__link-icon" src="img/phone.svg" alt="Телефон" />
+              <span class="menu__link-text">+7 (978) 199-23-00</span>
+            </a>
+          </li>
+          <li class="menu__item menu__item--email">
+            <a class="menu__link" href="mailto:martynov2006-2022@mail.ru" title="Написать письмо">
+              <img class="menu__link-icon" src="img/email.svg" alt="Электронная почта" />
+              <span class="menu__link-text">martynov2006-2022@mail.ru</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+  <div class="container">
+    <div class="top__inner">
+      <h1 class="title">ТМ "Мартыновъ"</h1>
+      <p class="top__descr">Производители мясных и колбасных изделий из Крыма, г. Симферополь</p>
+      <form class="top__form form" action="">
+        <div class="form__group">
+          <input class="form__input" type="text" name="name" placeholder="Имя">
+          <span class="form__sup-text">это поле обязательно для заполнения</span>
+        </div>
+        <div class="form__group">
+          <input class="form__input" type="tel" name="tel" placeholder="Номер телефона">
+          <span class="form__sup-text">это поле обязательно для заполнения</span>
+        </div>
+        <div class="form__group">
+          <button class="form__btn btn">Заказать прайс</button>
+          <span class="form__sup-text form__agreement">Отправляя заявку, Вы даете согласие на обработку персональных данных</>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+      <main class="main"></main>
+
+      <footer class="footer" id="footer"></footer>
+
+    </div>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

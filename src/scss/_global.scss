@@ -1,0 +1,161 @@
+@keyframes toggle-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  background-color: var(--color-grey-10);
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-black);
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.locked {
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 110vh;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: calc(var(--container) + var(--gap) * 2);
+  margin: 0 auto;
+  padding: 0 var(--gap);
+}
+
+.btn {
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  background-color: var(--color-primary);
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: var(--color-white);
+  text-decoration: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color .3s;
+  
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--color-primary-light);
+    }
+  }
+  
+  &:active {
+    background-color: var(--color-primary-dark);
+  }
+}
+
+.form {
+  display: flex;
+  gap: 20px;
+
+  &__group {
+    position: relative;
+  }
+  
+  &__input {
+    padding: 16px;
+    padding-left: 24px;
+    border: 1px solid var(--color-grey-20);
+    border-radius: 30px;
+    background-color: transparent;
+    color: var(--color-white);
+    transition: border-color .3s;
+
+    &::placeholder {
+      color: var(--color-grey-20);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  
+    &:focus-visible {
+      outline: 1px solid var(--color-white);
+    }
+  
+    @media (hover: hover) {
+      &:hover {
+        border-color: var(--color-grey-10);
+      }
+    }
+
+    &.error {
+      border-color: var(--color-error);
+      &::placeholder {
+        color: var(--color-error);
+      }
+      & ~ .form__sup-text {
+        display: inline;
+        color: var(--color-error);
+      }
+    }
+  }
+
+  &__sup-text {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    font-size: 11px;
+    font-weight: 300;
+    text-align: center;
+    display: none;
+  }
+
+  &__agreement {
+    display: inline;
+    color: var(--color-grey-20);
+  }
+
+}

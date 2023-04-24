@@ -1,0 +1,22 @@
+.tabs {
+  &__nav {
+    display: flex;
+  }
+
+  &__btn {
+    padding: 10px 20px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid #e6bb27;
+    &--active {
+      background-color: #e6bb27;
+    }
+  }
+
+  &__item {
+    display: none;
+    &--active {
+      display: block;
+    }
+  }
+}
