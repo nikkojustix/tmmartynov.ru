@@ -424,8 +424,9 @@ img {
   display: flex;
   align-items: center;
   gap: 10px;
-  border: none;
+  border: 1px solid transparent;
   background-color: var(--color-primary);
+  white-space: nowrap;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -461,6 +462,9 @@ img {
 .form__input {
   padding: 16px;
   padding-left: 24px;
+  max-width: 240px;
+  width: 100%;
+  line-height: 20px;
   border: 1px solid var(--color-grey-20);
   border-radius: 30px;
   background-color: transparent;
@@ -777,6 +781,7 @@ img {
   min-height: 100vh;
   background-image: url("../img/top-bg.jpg");
   background-size: cover;
+  background-position: center;
   color: var(--color-white);
 }
 .top__inner {
@@ -815,4 +820,90 @@ img {
   font-family: "Bernhard", serif;
   font-weight: 400;
   margin: 0;
+}
+
+@media (max-width: 767px) {
+  .top__inner {
+    padding-top: 60px;
+    text-align: center;
+  }
+  .top__descr {
+    font-size: 20px;
+    max-width: 360px;
+    margin: 40px auto 0;
+  }
+  .top__form {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+  .title {
+    font-size: 64px;
+  }
+}
+@media (max-width: 479px) {
+  .top__inner {
+    padding-top: 40px;
+    text-align: center;
+  }
+  .top__descr {
+    font-size: 16px;
+    max-width: 360px;
+    margin: 40px auto 0;
+  }
+  .top__form {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+  }
+  .title {
+    font-size: 48px;
+  }
+}
+.pros {
+  margin-top: -100px;
+}
+.pros__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--gap);
+}
+.pros__item {
+  padding: 20px;
+  border-radius: 32px;
+  background-color: var(--color-grey-10);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+.pros__img {
+  width: 80px;
+  height: 80px;
+}
+.pros__name {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  margin: 0;
+}
+.pros__descr {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+@media (max-width: 479px) {
+  .pros__item {
+    padding: 10px;
+  }
+  .pros__img {
+    width: 60px;
+    height: 60px;
+  }
+  .pros__name {
+    font-size: 14px;
+  }
 }

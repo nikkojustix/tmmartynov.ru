@@ -2,6 +2,7 @@
   min-height: 100vh;
   background-image: url('@img/top-bg.jpg');
   background-size: cover;
+  background-position: center;
   color: var(--color-white);
 
   &__inner {
@@ -15,7 +16,7 @@
     max-width: 530px;
     margin: 60px 0 0;
   }
-  
+
   &__form {
     margin: 60px 0 0;
   }
@@ -27,7 +28,7 @@
   .menu {
     padding: 0;
   }
-  
+
   .menu__link {
     &:focus {
       outline: none;
@@ -50,4 +51,50 @@
   font-family: 'Bernhard', serif;
   font-weight: 400;
   margin: 0;
+}
+
+@media (max-width: 767px) {
+  .top {
+    &__inner {
+      padding-top: 60px;
+      text-align: center;
+    }
+    &__descr {
+      font-size: 20px;
+      max-width: 360px;
+      margin: 40px auto 0;
+    }
+
+    &__form {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+    }
+  }
+  .title {
+    font-size: 64px;
+  }
+}
+
+@media (max-width: 479px) {
+  .top {
+    &__inner {
+      padding-top: 40px;
+      text-align: center;
+    }
+    &__descr {
+      font-size: 16px;
+      max-width: 360px;
+      margin: 40px auto 0;
+    }
+
+    &__form {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 40px;
+    }
+  }
+  .title {
+    font-size: 48px;
+  }
 }

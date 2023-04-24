@@ -64,8 +64,9 @@ img {
   display: flex;
   align-items: center;
   gap: 10px;
-  border: none;
+  border: 1px solid transparent;
   background-color: var(--color-primary);
+  white-space: nowrap;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -73,8 +74,8 @@ img {
   text-decoration: none;
   border-radius: 30px;
   cursor: pointer;
-  transition: background-color .3s;
-  
+  transition: background-color 0.3s;
+
   &:focus {
     outline: none;
   }
@@ -89,7 +90,7 @@ img {
       background-color: var(--color-primary-light);
     }
   }
-  
+
   &:active {
     background-color: var(--color-primary-dark);
   }
@@ -102,15 +103,18 @@ img {
   &__group {
     position: relative;
   }
-  
+
   &__input {
     padding: 16px;
     padding-left: 24px;
+    max-width: 240px;
+    width: 100%;
+    line-height: 20px;
     border: 1px solid var(--color-grey-20);
     border-radius: 30px;
     background-color: transparent;
     color: var(--color-white);
-    transition: border-color .3s;
+    transition: border-color 0.3s;
 
     &::placeholder {
       color: var(--color-grey-20);
@@ -119,11 +123,11 @@ img {
     &:focus {
       outline: none;
     }
-  
+
     &:focus-visible {
       outline: 1px solid var(--color-white);
     }
-  
+
     @media (hover: hover) {
       &:hover {
         border-color: var(--color-grey-10);
@@ -157,5 +161,4 @@ img {
     display: inline;
     color: var(--color-grey-20);
   }
-
 }
