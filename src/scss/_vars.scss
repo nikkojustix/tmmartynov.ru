@@ -14,9 +14,9 @@
   --color-accent: #f8981d;
   --color-light-accent: #e9f0ed;
 
-  --color-error: #e77373;
+  --color-error: #e57373;
   // --color-error: #b3261e;
-  --color-success: #21725e;
+  --color-success: #2e7d32;
 
   --shadow: 0px 44px 18px rgba(0, 0, 0, 0.01), 0px 25px 15px rgba(0, 0, 0, 0.05), 0px 11px 11px rgba(0, 0, 0, 0.09),
     0px 3px 6px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
@@ -28,4 +28,10 @@
 
   --font-primary: 'Rubik', sans-serif;
   --font-secondary: 'Bernhard', serif;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --gutter-outer: 60px;
+  }
 }
