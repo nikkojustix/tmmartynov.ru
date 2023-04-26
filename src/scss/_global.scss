@@ -74,7 +74,7 @@ img {
   text-decoration: none;
   border-radius: 30px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: 0.3s;
 
   &:focus {
     outline: none;
@@ -93,6 +93,21 @@ img {
 
   &:active {
     background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+  }
+
+  &--outline {
+    background-color: transparent;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    text-transform: none;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--color-primary);
+        color: var(--color-white);
+      }
+    }
   }
 }
 

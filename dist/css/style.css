@@ -583,7 +583,7 @@ img {
   text-decoration: none;
   border-radius: 30px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: 0.3s;
 }
 .btn:focus {
   outline: none;
@@ -599,6 +599,19 @@ img {
 }
 .btn:active {
   background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  text-transform: none;
+}
+@media (hover: hover) {
+  .btn--outline:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
 }
 
 .form {
@@ -1194,4 +1207,94 @@ img {
   line-height: 24px;
   text-align: center;
   color: var(--color-primary);
+}
+
+.latest-news__items {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: var(--gap);
+}
+.latest-news__item {
+  position: relative;
+  display: flex;
+  gap: var(--gap);
+}
+.latest-news__item--first {
+  flex-direction: column;
+  grid-row: span 2;
+}
+.latest-news__item--first .latest-news__img {
+  max-height: 300px;
+}
+.latest-news__img {
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 32px;
+  flex: 1 1 100%;
+}
+.latest-news__content {
+  flex: 1 1 100%;
+}
+.latest-news__date {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--color-primary);
+}
+.latest-news__title {
+  margin: 10px 0 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.latest-news__link {
+  margin: 20px 0 0;
+  display: inline-flex;
+}
+@media (hover: hover) {
+  .latest-news__link:hover .latest-news__link-icon path {
+    fill: var(--color-white);
+  }
+}
+.latest-news__link::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.latest-news__link-icon path {
+  fill: var(--color-primary);
+  transition: 0.3s;
+}
+.latest-news__link-all {
+  margin: 20px auto 0;
+  width: fit-content;
+}
+
+@media (max-width: 1149px) {
+  .latest-news__items {
+    grid-template-columns: 1fr;
+  }
+  .latest-news__item--first {
+    flex-direction: row;
+  }
+  .latest-news__img {
+    flex-basis: auto;
+    width: 280px;
+    height: 200px;
+  }
+}
+@media (max-width: 599px) {
+  .latest-news__item {
+    flex-direction: column;
+  }
+  .latest-news__img {
+    width: 100%;
+  }
+  .latest-news__link {
+    margin-top: 10px;
+  }
 }
