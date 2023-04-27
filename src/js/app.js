@@ -6,18 +6,23 @@ flsFunctions.isWebp();
 const burgerBtn = document.querySelector('.burger__btn');
 burgerBtn.addEventListener('click', flsFunctions.toggleMobileMenu);
 
-new Splide('.testimonials', {
-  perPage: 3,
-  perMove: 1,
-  pagination: false,
-  gap: 20,
-  type: 'loop',
-  breakpoints: {
-    999: {
-      perPage: 2,
+if (document.querySelector('.testimonials') != null) {
+
+  new Splide('.testimonials', {
+    perPage: 3,
+    perMove: 1,
+    pagination: false,
+    gap: 20,
+    type: 'loop',
+    breakpoints: {
+      999: {
+        perPage: 2,
+      },
+      767: {
+        perPage: 1,
+      },
     },
-    767: {
-      perPage: 1,
-    },
-  },
-}).mount();
+  }).mount();
+}
+
+document.querySelector('.current-year').innerHTML = new Date().getFullYear();

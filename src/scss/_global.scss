@@ -182,6 +182,13 @@ img {
   margin-top: var(--gutter-outer);
 }
 
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap);
+}
+
 .title {
   font-family: 'Bernhard', serif;
   font-size: 48px;
