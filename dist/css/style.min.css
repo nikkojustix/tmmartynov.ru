@@ -1608,3 +1608,21 @@ img {
     margin-top: 10px;
   }
 }
+.article__date {
+  display: block;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--color-primary);
+}
+.article__inner {
+  margin-top: 40px;
+}
+.article__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  margin: 40px 0;
+}

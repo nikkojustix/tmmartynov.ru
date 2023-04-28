@@ -1,0 +1,23 @@
+.article {
+
+  &__date {
+    display: block;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--color-primary);
+  }
+
+  &__inner {
+    margin-top: 40px;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    margin: 40px 0;
+  }
+}
