@@ -1,5 +1,4 @@
 .category {
-
   &__items {
     margin-top: var(--gutter-inner);
     display: flex;
@@ -14,9 +13,9 @@
   border-radius: 32px;
   display: flex;
   gap: var(--gap);
-  transition: .3s;
+  transition: 0.3s;
 
-  @media (hover:hover) {
+  @media (hover: hover) {
     &:hover {
       box-shadow: var(--shadow);
 
@@ -27,8 +26,9 @@
   }
 
   &__img {
-    width: 200px;
-    height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+    height: 100%;
     object-fit: contain;
   }
 
@@ -36,7 +36,7 @@
     font-size: 20px;
     font-weight: 500;
     margin: 0;
-    transition: .3s;
+    transition: 0.3s;
   }
 
   &__props {
@@ -111,7 +111,6 @@
     line-height: 24px;
   }
 }
-
 
 @media (max-width: 599px) {
   .category .title-row {

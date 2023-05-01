@@ -51,6 +51,9 @@ img {
 
 .main {
   flex-grow: 1;
+  &__content {
+    margin-top: 40px;
+  }
 }
 
 .container {
@@ -114,6 +117,11 @@ img {
 .form {
   display: flex;
   gap: 20px;
+
+  &--column {
+    flex-direction: column;
+    align-items: center;
+  }
 
   &__group {
     position: relative;
@@ -194,6 +202,37 @@ img {
   font-size: 48px;
   font-weight: 400;
   margin: 0;
+}
+
+.scroll-to-top {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  background: #fff;
+  background: radial-gradient(circle, rgba(#fff, 1) 0%, rgba(#fff, 0) 100%);
+  z-index: 1000;
+  cursor: pointer;
+  transition: 0.5s;
+
+  svg {
+    width: 37px;
+    height: 37px;
+    fill: var(--color-primary);
+    transition: 0.3s;
+  }
+
+  &:hover {
+    background: radial-gradient(circle, rgba(#fff, 1) 40%, rgba(#fff, 0) 100%);
+
+    svg {
+      fill: var(--color-primary-dark);
+    }
+  }
 }
 
 @media (max-width: 767px) {
