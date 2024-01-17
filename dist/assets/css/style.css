@@ -697,6 +697,10 @@ img {
           flex-grow: 1;
 }
 
+.main__content {
+  margin-top: 40px;
+}
+
 .container {
   max-width: -webkit-calc(var(--container) + var(--gap) * 2);
   max-width: calc(var(--container) + var(--gap) * 2);

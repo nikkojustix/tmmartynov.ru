@@ -1,5 +1,6 @@
 import * as flsFunctions from './modules/functions.js';
 import { Splide } from '@splidejs/splide';
+import fslightbox from 'fslightbox';
 
 flsFunctions.isWebp();
 
@@ -21,6 +22,13 @@ if (document.querySelector('.testimonials') != null) {
         perPage: 1,
       },
     },
+  }).mount();
+}
+
+if (document.querySelector('.article__images') != null) {
+  new Splide('.article__images', {
+    pagination: false,
+    type: 'loop',
   }).mount();
 }
 
