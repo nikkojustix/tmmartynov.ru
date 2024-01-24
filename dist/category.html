@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная</title>
-  <link rel="stylesheet" href="assets/css/style.min.css?_v=20230512143701" />
+  <link rel="stylesheet" href="assets/css/style.min.css" />
 </head>
 
   <body>
@@ -86,7 +86,7 @@
         </ul>
       </nav>
       <a class="logo" href="/">
-        <picture><source srcset="assets/img/logo.webp" type="image/webp"><img class="logo__img" src="assets/img/logo.png" alt="Логотип" /></picture>
+        <img class="logo__img" src="assets/img/logo.png" alt="Логотип" />
       </a>
       <nav class="menu menu--contacts">
         <ul class="menu__list">
@@ -101,6 +101,12 @@
               <img class="menu__link-icon" src="assets/img/email.svg" alt="Электронная почта" />
               <span class="menu__link-text">martynov2006-2022@mail.ru</span>
             </a>
+          </li>
+          <li class="menu__item menu__item--cart">
+            <button class="menu__link cart-btn">
+              <img class="menu__link-icon" src="assets/img/cart.svg" alt="Корзина" />
+              <span class="cart-btn__badge">1</span>
+            </button>
           </li>
         </ul>
       </nav>
@@ -137,7 +143,7 @@
     </div>
     <div class="category__items">
       <div class="category__item product">
-        <picture><source srcset="assets/img/catalog-img-1.webp" type="image/webp"><img class="product__img" src="assets/img/catalog-img-1.png" alt="Колбаса “Балыковая”" /></picture>
+        <img class="product__img" src="assets/img/catalog-img-1.png" alt="Колбаса “Балыковая”" />
         <div class="product__content">
           <h2 class="product__title">Колбаса “Балыковая”</h2>
           <ul class="product__props">
@@ -165,7 +171,7 @@
         </div>
       </div>
       <div class="category__item product">
-        <picture><source srcset="assets/img/catalog-img-2.webp" type="image/webp"><img class="product__img" src="assets/img/catalog-img-2.png" alt="Колбаса “Императорская”" /></picture>
+        <img class="product__img" src="assets/img/catalog-img-2.png" alt="Колбаса “Императорская”" />
         <div class="product__content">
           <h2 class="product__title">Колбаса “Императорская”</h2>
           <ul class="product__props">
@@ -193,7 +199,7 @@
         </div>
       </div>
       <div class="category__item product">
-        <picture><source srcset="assets/img/catalog-img-3.webp" type="image/webp"><img class="product__img" src="assets/img/catalog-img-3.png" alt="Колбаса “Венгерская”" /></picture>
+        <img class="product__img" src="assets/img/catalog-img-3.png" alt="Колбаса “Венгерская”" />
         <div class="product__content">
           <h2 class="product__title">Колбаса “Венгерская”</h2>
           <ul class="product__props">
@@ -236,7 +242,7 @@
     <div class="footer__inner">
       <div class="footer__col">
         <a class="logo footer__logo" href="/">
-          <picture><source srcset="assets/img/logo.webp" type="image/webp"><img class="logo__img" src="assets/img/logo.png" alt="Логотип" /></picture>
+          <img class="logo__img" src="assets/img/logo.png" alt="Логотип" />
         </a>
         <p class="footer__copy">© <span class="current-year"></span> Торговая марка «Мартыновъ»</p>
       </div>
@@ -321,6 +327,6 @@
 </div>
 
     </div>
-    <script src="assets/js/app.min.js?_v=20230512143701"></script>
+    <script src="assets/js/app.min.js"></script>
   </body>
 </html>

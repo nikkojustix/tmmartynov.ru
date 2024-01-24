@@ -55,8 +55,11 @@
     border-radius: 20px;
     font-size: 17px;
     font-weight: 500;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
     transition: 0.3s;
-    
+
     &:focus {
       outline: none;
     }
@@ -180,14 +183,14 @@
       bottom: 0;
       min-height: 100vh;
       z-index: 4;
-      background-color: rgba(0,0,0,0.6);
+      background-color: rgba(0, 0, 0, 0.6);
       .burger__menu-list {
         visibility: visible;
         transform: translateX(0);
       }
     }
   }
-  
+
   &__menu-list {
     padding: 100px 20px 20px;
     width: 300px;
@@ -201,9 +204,9 @@
     overflow: auto;
     position: fixed;
     top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 
   &__menu-item {
@@ -260,6 +263,56 @@
   }
 }
 
+.cart-btn {
+  position: relative;
+
+  &:focus .cart-btn__badge {
+    outline: none;
+  }
+
+  &:focus-visible .cart-btn__badge {
+    background-color: var(--color-primary);
+  }
+  @media (hover: hover) {
+    &:hover .cart-btn__badge {
+      background-color: var(--color-primary);
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 5px;
+    max-width: 36px;
+    width: 16px;
+    height: 16px;
+    border-radius: 10px;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    line-height: 12px;
+    font-variant-numeric: lining-nums tabular-nums;
+    transition: 0.3s;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      background-color: var(--color-primary);
+    }
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--color-primary);
+      }
+    }
+  }
+}
+
 @media (max-width: 1299px) {
   .header {
     &::before {
@@ -271,8 +324,11 @@
   }
   .burger {
     display: block;
+    flex-basis: 33%;
   }
   .menu {
+    flex-basis: 33%;
+    justify-content: flex-end;
     &--nav {
       display: none;
     }
@@ -298,10 +354,13 @@
   .menu {
     padding: 0;
     &__link {
-      padding: 0;
+      padding: 5px;
     }
     &__item--email {
       display: none;
+    }
+    &__list {
+      gap: 5px;
     }
   }
   .burger {
