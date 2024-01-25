@@ -927,6 +927,9 @@ img {
 .burger__menu-item {
   margin-bottom: 10px;
 }
+.burger__menu-item--cart {
+  position: relative;
+}
 .burger__menu-link {
   display: block;
   padding: 5px 0;
@@ -1007,6 +1010,117 @@ img {
   .cart-btn__badge:hover {
     background-color: var(--color-primary);
   }
+}
+
+.cart {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  padding: 20px 20px 30px;
+  background-color: var(--color-black);
+  border-radius: 32px;
+  width: 280px;
+}
+.cart__head {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+.cart__close-btn {
+  position: absolute;
+  background-color: transparent;
+  right: 16px;
+  top: 16px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+.cart__close-img {
+  width: 24px;
+  height: 24px;
+}
+.cart__item {
+  padding: 20px 0;
+}
+.cart__item + .cart__item {
+  border-top: 1px solid rgba(106, 106, 106, 0.3);
+}
+.cart__item-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cart__item-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+.cart__item-name {
+  font-size: 14px;
+}
+.cart__item-controls {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart__item-counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cart__item-counter-btn {
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  background-color: transparent;
+}
+.cart__item-counter-btn:focus {
+  outline: none;
+}
+.cart__item-counter-btn:focus-visible .cart__item-counter-btn-img {
+  background-color: var(--color-white);
+}
+@media (hover: hover) {
+  .cart__item-counter-btn:hover .cart__item-counter-btn-img {
+    background-color: var(--color-white);
+  }
+}
+.cart__item-counter-btn-img {
+  border-radius: 50%;
+  background-color: var(--color-grey-20);
+  transition: 0.3s;
+}
+.cart__item-counter-value {
+  font-variant-numeric: lining-nums tabular-nums;
+  line-height: 16px;
+}
+.cart__item-remove-btn {
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  background-color: transparent;
+  border-radius: 50%;
+}
+.cart__item-remove-btn:focus {
+  outline: none;
+}
+.cart__item-remove-btn:focus-visible .cart__item-remove-img path {
+  fill: var(--color-primary-light);
+}
+@media (hover: hover) {
+  .cart__item-remove-btn:hover .cart__item-remove-img path {
+    fill: var(--color-primary-light);
+  }
+}
+.cart__item-remove-img {
+  border-radius: 50%;
+}
+.cart__item-remove-img path {
+  transition: 0.3s;
+}
+.cart__btn {
+  margin: 0px auto 0;
 }
 
 @media (max-width: 1299px) {
