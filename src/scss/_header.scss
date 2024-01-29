@@ -325,6 +325,7 @@
   background-color: var(--color-black);
   border-radius: 32px;
   width: 280px;
+  z-index: 1;
 
   &__head {
     font-size: 20px;
@@ -345,9 +346,6 @@
   &__close-img {
     width: 24px;
     height: 24px;
-  }
-
-  &__items {
   }
 
   &__item {
@@ -380,43 +378,6 @@
     align-items: center;
   }
 
-  &__item-counter {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  &__item-counter-btn {
-    border: none;
-    cursor: pointer;
-    padding: 4px;
-    background-color: transparent;
-
-    &:focus {
-      outline: none;
-    }
-
-    &:focus-visible .cart__item-counter-btn-img {
-      background-color: var(--color-white);
-    }
-    @media (hover: hover) {
-      &:hover .cart__item-counter-btn-img {
-        background-color: var(--color-white);
-      }
-    }
-  }
-
-  &__item-counter-btn-img {
-    border-radius: 50%;
-    background-color: var(--color-grey-20);
-    transition: 0.3s;
-  }
-
-  &__item-counter-value {
-    font-variant-numeric: lining-nums tabular-nums;
-    line-height: 16px;
-  }
-
   &__item-remove-btn {
     border: none;
     cursor: pointer;
@@ -447,6 +408,58 @@
 
   &__btn {
     margin: 0px auto 0;
+  }
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+
+  &__btn {
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    background-color: transparent;
+
+    .counter__btn-img {
+      border-radius: 50%;
+      background-color: var(--color-grey-20);
+      transition: 0.3s;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible .counter__btn-img {
+      background-color: var(--color-white);
+    }
+    @media (hover: hover) {
+      &:hover .counter__btn-img {
+        background-color: var(--color-white);
+      }
+    }
+
+    &--product {
+      .counter__btn-img {
+        background-color: var(--color-grey-10);
+      }
+      &:focus-visible .counter__btn-img {
+        background-color: var(--color-grey-20);
+      }
+      @media (hover: hover) {
+        &:hover .counter__btn-img {
+          background-color: var(--color-grey-20);
+        }
+      }
+    }
+  }
+
+  &__value {
+    font-variant-numeric: lining-nums tabular-nums;
+    line-height: 16px;
   }
 }
 

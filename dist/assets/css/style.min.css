@@ -1020,6 +1020,7 @@ img {
   background-color: var(--color-black);
   border-radius: 32px;
   width: 280px;
+  z-index: 1;
 }
 .cart__head {
   font-size: 20px;
@@ -1064,37 +1065,6 @@ img {
   justify-content: space-between;
   align-items: center;
 }
-.cart__item-counter {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.cart__item-counter-btn {
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-  background-color: transparent;
-}
-.cart__item-counter-btn:focus {
-  outline: none;
-}
-.cart__item-counter-btn:focus-visible .cart__item-counter-btn-img {
-  background-color: var(--color-white);
-}
-@media (hover: hover) {
-  .cart__item-counter-btn:hover .cart__item-counter-btn-img {
-    background-color: var(--color-white);
-  }
-}
-.cart__item-counter-btn-img {
-  border-radius: 50%;
-  background-color: var(--color-grey-20);
-  transition: 0.3s;
-}
-.cart__item-counter-value {
-  font-variant-numeric: lining-nums tabular-nums;
-  line-height: 16px;
-}
 .cart__item-remove-btn {
   border: none;
   cursor: pointer;
@@ -1121,6 +1091,50 @@ img {
 }
 .cart__btn {
   margin: 0px auto 0;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.counter__btn {
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  background-color: transparent;
+}
+.counter__btn .counter__btn-img {
+  border-radius: 50%;
+  background-color: var(--color-grey-20);
+  transition: 0.3s;
+}
+.counter__btn:focus {
+  outline: none;
+}
+.counter__btn:focus-visible .counter__btn-img {
+  background-color: var(--color-white);
+}
+@media (hover: hover) {
+  .counter__btn:hover .counter__btn-img {
+    background-color: var(--color-white);
+  }
+}
+.counter__btn--product .counter__btn-img {
+  background-color: var(--color-grey-10);
+}
+.counter__btn--product:focus-visible .counter__btn-img {
+  background-color: var(--color-grey-20);
+}
+@media (hover: hover) {
+  .counter__btn--product:hover .counter__btn-img {
+    background-color: var(--color-grey-20);
+  }
+}
+.counter__value {
+  font-variant-numeric: lining-nums tabular-nums;
+  line-height: 16px;
 }
 
 @media (max-width: 1299px) {
@@ -1743,8 +1757,15 @@ img {
   font-weight: 400;
   line-height: 24px;
 }
+.product__btns {
+  flex-shrink: 0;
+  align-self: flex-end;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
 
-@media (max-width: 599px) {
+@media (max-width: 839px) {
   .category .title-row {
     flex-direction: column;
   }
